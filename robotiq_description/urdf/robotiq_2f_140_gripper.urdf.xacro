@@ -6,8 +6,12 @@
     <!-- Import macros -->
     <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_140_macro.urdf.xacro" />
 
+    <!-- Include transmission gazebo -->
+    <xacro:include filename="$(find robotiq_description)/urdf/robotiq_140_gripper.transmission.xacro" />
+
     <link name="world" />
     <xacro:robotiq_gripper name="RobotiqGripperHardwareInterface" prefix="" parent="world" use_fake_hardware="$(arg use_fake_hardware)">
         <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:robotiq_gripper>
+
 </robot>
